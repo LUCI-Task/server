@@ -6,6 +6,8 @@ const userSchema = mongoose.Schema({
   email: String,
   selectedFile: String,
   status: String,
+  project: String,
+  role: String,
   createdAt: {
     type: Date,
     default: new Date(),

@@ -8,8 +8,6 @@ import userRoutes from "./routes/users.js";
 
 const server = express();
 
-server.use("/users", userRoutes);
-
 server.use(express.urlencoded({ limit: "30mb", extended: true }));
 server.use(express.json()); //parsing JSON
 server.use(helmet());
@@ -29,5 +27,7 @@ mongoose
     )
   )
   .catch((err) => console.log(err.message));
+
+server.use("/users", userRoutes);
 
 mongoose.set("useFindAndModify", false);
