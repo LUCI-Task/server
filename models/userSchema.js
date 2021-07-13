@@ -8,6 +8,8 @@ const userSchema = mongoose.Schema({
   status: String,
   project: String,
   role: String,
+  bio: String,
+
   createdAt: {
     type: Date,
     default: new Date(),
