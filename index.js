@@ -16,7 +16,7 @@ server.use(helmet());
 server.use(morgan("tiny"));
 server.use(cors());
 
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 5000;
 
 mongoose
   .connect(process.env.MONGODB_URL, {
