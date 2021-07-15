@@ -19,7 +19,6 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
-    "mongodb-memory-server": "^7.2.1",
     "mongoose": "^5.13.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.12"
