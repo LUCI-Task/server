@@ -17,7 +17,7 @@ mongoose
   )
   .catch((err) => console.log(err.message));
 
-server.get("/", () => {
+server.get("/", (req, res) => {
   res.send("Welcome to the danger zone");
 });
 
