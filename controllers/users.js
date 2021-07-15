@@ -1,24 +1,13 @@
 import express from "express";
-import mongoose from "mongoose";
+
 import UserSchema from "../models/userSchema.js";
 
 const router = express.Router();
 
 export const getUsers = async (_, res) => {
   try {
-    const users = await UserSchema.find();
+    const users = await UserSchema.find().sort({ $natural: -1 });
     res.status(200).json(users);
-  } catch (err) {
-    res.status(404).json({ message: err.message });
-  }
-};
-
-export const getUser = async (req, res) => {
-  const { id } = req.params;
-  if (!UserSchema.findById(id)) return res.status(404).send("No user found!");
-  try {
-    const user = await UserSchema.findById(id);
-    res.status(200).json(user);
   } catch (err) {
     res.status(404).json({ message: err.message });
   }

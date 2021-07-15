@@ -1,20 +1,7 @@
-import express from "express";
 import mongoose from "mongoose";
-import cors from "cors";
-import morgan from "morgan";
-import helmet from "helmet";
-import dotenv from "dotenv";
 
+import server from "./app.js";
 import userRoutes from "./routes/users.js";
-
-const server = express();
-dotenv.config();
-
-server.use(express.urlencoded({ limit: "30mb", extended: true }));
-server.use(express.json()); //parsing JSON
-server.use(helmet());
-server.use(morgan("tiny"));
-server.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
@@ -29,6 +16,10 @@ mongoose
     )
   )
   .catch((err) => console.log(err.message));
+
+server.get("/", () => {
+  res.send("Welcome to the danger zone");
+});
 
 server.use("/users", userRoutes);
 
