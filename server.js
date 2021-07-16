@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-
+import dotenv from "dotenv";
 import server from "./app.js";
 import userRoutes from "./routes/users.js";
 
-require("dotenv").config();
-
+dotenv.config();
+console.log("from server", process.env.MONGODB_URL);
 const PORT = process.env.PORT || 5000;
 
 mongoose
