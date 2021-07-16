@@ -7,8 +7,9 @@ dotenv.config();
 console.log("from server", process.env.MONGODB_URL);
 const PORT = process.env.PORT || 5000;
 
+const uri = process.env.MONGODB_URL;
 mongoose
-  .connect(process.env.MONGODB_URL, {
+  .connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
