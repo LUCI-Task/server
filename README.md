@@ -1,6 +1,6 @@
 ##  API Documentation
 
-### Backend delpoyed at [Heroku](https://luci-project.herokuapp.com/) <br>
+### Backend deployed at [Heroku](https://luci-project.herokuapp.com/) <br>
 
 
 ## Getting Started
