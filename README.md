@@ -49,5 +49,6 @@ To get the server running locally:
   bio: String,
 }
 
+```
 
-### [Go to Front End](https://github.com/LUCI-Task/client)=>
+### [Go to Front End](https://github.com/LUCI-Task/client) =>
