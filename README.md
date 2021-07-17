@@ -24,7 +24,7 @@ To get the server running locally:
 
 | Method | Endpoint                    | Access Control | Description                           |
 | ------ | --------------------------- | -------------- | ------------------------------------- |
-| GET    | `/users`                    | admins         | Returns list of all users.            |
+| GET    | `/users`                    | all users      | Returns list of all users.            |
 | PUT    | `/users/:Id`                | all users      | Update user's account info by id.     |
 | POST   | `/users/:Id`                | all users      | Creates new user.                     |
 | DELETE | `/users/:Id`                | all users      | Delete user's account by id.          |
